@@ -1,0 +1,64 @@
+src/
+│
+├── app/
+│   ├── features/
+│   │   └── auth/
+│   │       └── AuthSlice.js
+│   └── store.js
+│
+├── components/
+│   ├── ai/
+│   │   ├── DataDisplay.js
+│   │   └── formatResponseData.js
+│   │
+│   ├── common/
+│   │   ├── maps/
+│   │   │   └── CommonMapGView.jsx
+│   │   ├── Booking.jsx
+│   │   ├── DatePickerComponent.jsx
+│   │   ├── EditPage.jsx
+│   │   ├── GooglePlacesName.js
+│   │   ├── Menu.jsx
+│   │   ├── Profile.jsx
+│   │   ├── ProfileDetailCard.jsx
+│   │   ├── SearchBtn.jsx
+│   │   └── SvgImage.jsx
+│   │
+│   ├── driver/
+│   │   ├── DriverProfile/
+│   │   │   ├── AllMessagesScreen.jsx
+│   │   │   ├── DriverOrganizationView.jsx
+│   │   │   └── TouchPushMessage.jsx
+│   │   ├── OrganizationDriverProfile.jsx
+│   │   ├── OrgnizationDrivers.jsx
+│   │   └── VehicleDetailCard.jsx
+│   │
+│   ├── organization/
+│   │   ├── AddTrip.jsx
+│   │   ├── AddVehicle.jsx
+│   │   ├── TripView.jsx
+│   │   ├── VehicleEdit.jsx
+│   │   └── VehicleView.jsx
+│   │
+│   └── passenger/
+│       ├── BookingDetailView.jsx
+│       ├── InBetweenPlaces.jsx
+│       ├── PassengerProfile.jsx
+│       └── ProfileP.jsx
+│
+├── screens/
+│   ├── AuthScreen/
+│   │   ├── Login.jsx
+│   │   └── Register.js
+│   ├── AiScreen.jsx
+│   ├── AddressPickUp.jsx
+│   ├── Home.jsx
+│   ├── MapScreen.jsx
+│   ├── NotificationScreen.jsx
+│   ├── TestScreen.jsx
+│   ├── TripsScreen.jsx
+│   └── Vehicle.jsx
+│
+└── services/
+    ├── baseurl.js
+    └── StackNavigate.js

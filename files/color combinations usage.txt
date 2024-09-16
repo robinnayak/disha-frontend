@@ -1,0 +1,1008 @@
+Here's how you can apply the "Elegant and Professional" color scheme to your Disha project:
+
+### 1. **Primary Color: #2C3E50 (Midnight Blue)**
+   - **Significance:** The primary color is the most dominant and will be used extensively throughout the app. It sets the tone and mood of the application.
+   - **Usage:**
+     - **App Bar/Header:** Use this color for the app bar or headers to give a strong, professional appearance.
+     - **Navigation:** Apply this color to the navigation bar, tabs, and active icons to maintain consistency.
+     - **Buttons:** Use for primary action buttons (e.g., “Book Now,” “Confirm”).
+
+### 2. **Secondary Color: #E74C3C (Cinnabar)**
+   - **Significance:** The secondary color is used to complement the primary color and highlight elements that need attention.
+   - **Usage:**
+     - **Call-to-Action Buttons:** Use for buttons that require immediate attention, like "Cancel," "Delete," or other secondary actions.
+     - **Icons and Indicators:** Apply this color to important icons, status indicators, or warning messages.
+     - **Badges/Tags:** Use for badges or tags that need to stand out (e.g., new notifications).
+
+### 3. **Background Color: #ECF0F1 (Light Gray)**
+   - **Significance:** The background color is used to create a neutral space where other elements can stand out.
+   - **Usage:**
+     - **App Background:** Apply this color as the default background color for most screens.
+     - **Cards and Containers:** Use as a background color for cards, containers, or list items to create a clean and professional look.
+     - **Forms:** Use this as a background color for input fields, ensuring the form is easy to read.
+
+### 4. **Accent Color: #3498DB (Curious Blue)**
+   - **Significance:** The accent color is used sparingly to draw attention to specific elements and add a pop of color to the design.
+   - **Usage:**
+     - **Links:** Use for text links or other clickable elements to indicate interactivity.
+     - **Borders and Highlights:** Apply this color to borders around buttons, input fields, or highlighted elements.
+     - **Secondary Icons:** Use for secondary or less prominent icons to maintain a visual hierarchy.
+
+### 5. **Gradient: #2C3E50 (Midnight Blue) to #34495E (Dark Slate Gray)**
+   - **Significance:** The gradient adds depth and visual interest to the design.
+   - **Usage:**
+     - **Background of Splash Screen:** Use the gradient as the background for the splash screen or key landing pages to create a strong first impression.
+     - **Header/Title Backgrounds:** Apply this gradient to header or title backgrounds to differentiate sections.
+     - **Buttons:** Consider using the gradient for buttons or card backgrounds to add a premium feel.
+
+### 6. **Darker Shades: #273746 (Charcoal), #C0392B (Vermilion)**
+   - **Significance:** Darker shades provide depth and can be used to emphasize certain elements.
+   - **Usage:**
+     - **Hover/Active States:** Use these shades for hover or active states of buttons and links.
+     - **Shadow Effects:** Apply darker shades for shadow effects on cards, modals, or floating action buttons to give a subtle 3D effect.
+     - **Text:** Use #273746 for headers or important text that needs to stand out against lighter backgrounds.
+
+
+
+Accent Color: #3498DB (Curious Blue)
+Gradient 1:
+
+From: #3498DB (Curious Blue)
+To: #5DADE2 (Sky Blue)
+Description: This gradient transitions from the deep Curious Blue to a lighter Sky Blue, creating a subtle and professional effect for borders.
+Gradient 2:
+
+From: #3498DB (Curious Blue)
+To: #2980B9 (Boston Blue)
+Description: A slight darkening of Curious Blue into Boston Blue, ideal for creating depth in borders while maintaining a cohesive color theme.
+Gradient 3:
+
+From: #3498DB (Curious Blue)
+To: #1ABC9C (Persian Green)
+Description: A more vibrant transition that introduces a greenish hue, adding a modern and fresh look to the borders.
+
+
+
+Based on the color scheme you've chosen, here are recommendations for text color, font size, and boldness to ensure clarity, readability, and a cohesive design:
+
+### Text Color:
+1. **Primary Text (On Light Background):**
+   - **Color:** Midnight Blue `#2C3E50`
+   - **Usage:** Use this for the main text on light backgrounds, such as headings, body text, and important labels.
+
+2. **Primary Text (On Dark Background):**
+   - **Color:** White `#FFFFFF`
+   - **Usage:** Use this for main text on dark backgrounds, such as headings or important information on cards or dark sections.
+
+3. **Secondary Text:**
+   - **Color:** Silver `#BDC3C7`
+   - **Usage:** Use this for secondary text, such as subheadings, less important information, or placeholder text.
+
+4. **Accent Text:**
+   - **Color:** Curious Blue `#3498DB`
+   - **Usage:** Use this for links, buttons, or other interactive elements that you want to stand out.
+
+5. **Error/Warning Text:**
+   - **Color:** Cinnabar `#E74C3C`
+   - **Usage:** Use this for error messages, warnings, or critical alerts.
+
+### Font Size & Boldness:
+1. **Headings (H1, H2, H3):**
+   - **Font Size:** 24-32px (depending on importance)
+   - **Boldness:** 700-800 (Bold)
+   - **Color:** Midnight Blue `#2C3E50` on light backgrounds, White `#FFFFFF` on dark backgrounds
+
+2. **Subheadings (H4, H5, H6):**
+   - **Font Size:** 18-22px
+   - **Boldness:** 600-700 (Semi-Bold)
+   - **Color:** Midnight Blue `#2C3E50`
+
+3. **Body Text:**
+   - **Font Size:** 14-16px
+   - **Boldness:** 400-500 (Regular to Medium)
+   - **Color:** Midnight Blue `#2C3E50`
+
+4. **Small Text (Labels, Captions):**
+   - **Font Size:** 12-14px
+   - **Boldness:** 400 (Regular)
+   - **Color:** Silver `#BDC3C7`
+
+5. **Button Text:**
+   - **Font Size:** 14-16px
+   - **Boldness:** 600-700 (Semi-Bold to Bold)
+   - **Color:** White `#FFFFFF` (on dark or accent-colored buttons), or Midnight Blue `#2C3E50` (on light-colored buttons)
+
+### Implementation in Disha:
+- **Primary Text Color:** Use Midnight Blue `#2C3E50` for the main content areas, titles, and important information against light backgrounds like the default background color `#ECF0F1`.
+- **Secondary Text:** For less emphasized text like descriptions, use Silver `#BDC3C7`.
+- **Accent Text:** For clickable elements like links or buttons, apply Curious Blue `#3498DB`.
+- **Error/Warning Text:** Implement Cinnabar `#E74C3C` for any form validation errors or critical alerts.
+- **Contrast:** Ensure text is legible by maintaining high contrast with the background (e.g., white text on dark backgrounds).
+
+This setup should provide a consistent, clean, and professional look while maintaining readability and accessibility throughout the Disha app.
+
+
+
+
+output 
+========================================
+ LOG  action payload {"user": {"email": "Arun@email.com", "id": 11, "is_driver": false, "is_organization": false, "is_passenger": true, "username": "Arun"}}
+ LOG  state user  {"user": {"email": "Arun@email.com", "id": 11, "is_driver": false, "is_organization": false, "is_passenger": true, "username": "Arun"}}
+ LOG  ========================================
+
+
+
+
+import React, { useState, useEffect, useCallback } from "react";
+import { View, Button, ScrollView } from "react-native";
+import { putOrgUserProfile } from "../../../api/users/request";
+import { useSelector } from "react-redux";
+import CustomInput from "../CustomInput";
+import BottomMenu from "../../menu/BottomMenu";
+import { useNavigation } from "@react-navigation/native";
+import { showMessage } from "react-native-flash-message";
+import Icon from "react-native-vector-icons/FontAwesome";
+import CustomCheckbox from "../CustomCheckbox";
+
+const ProfileForm = ({ route }) => {
+  const navigation = useNavigation();
+  const token = useSelector((state) => state.auth.token.token);
+  const userType = useSelector((state) => state.auth.user_type);
+  const Data = route.params.profileData;
+
+  const [profileData, setProfileData] = useState({
+    phone_number: "",
+    profile_image: null,
+    address: "",
+    date_of_birth: null,
+    name: "",
+    registration_number: "",
+    description: "",
+    logo: null,
+    total_earnings: "0.00",
+    remaining_earnings: "0.00",
+    emergency_contact_name: "",
+    emergency_contact_number: "",
+    preferred_language: "",
+    license_number: "",
+    experience: "",
+    availability_status: false,
+  });
+
+  useEffect(() => {
+    if (Data) {
+      setProfileData({
+        phone_number: Data.phone_number || "",
+        profile_image: Data.profile_image || null,
+        address: Data.address || "",
+        date_of_birth: Data.date_of_birth || null,
+        name: Data.username || "",
+        registration_number: Data.registration_number || "",
+        description: Data.description || "",
+        logo: Data.logo || null,
+        total_earnings: Data.total_earnings || "0.00",
+        remaining_earnings: Data.remaining_earnings || "0.00",
+        emergency_contact_name: Data.emergency_contact_name || "",
+        emergency_contact_number: Data.emergency_contact_number || "",
+        preferred_language: Data.preferred_language || "",
+        license_number: Data.license_number || "",
+        experience: Data.experience || "",
+        availability_status: Data.availability_status || false,
+      });
+    }
+  }, [Data]);
+
+  const handleChange = (name, value) => {
+    setProfileData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = useCallback(async () => {
+    try {
+      const response = await putOrgUserProfile(token, profileData);
+
+      if (response) {
+        showMessage({
+          message: "Success",
+          description: "Profile updated successfully",
+          type: "success",
+        });
+        navigation.navigate("Home");
+      } else {
+        showMessage({
+          message: "Error",
+          description: "Failed to update profile",
+          type: "danger",
+        });
+      }
+    } catch (error) {
+      showMessage({
+        message: "Error",
+        description: "An error occurred while updating the profile",
+        type: "danger",
+      });
+    }
+  }, [profileData, token, navigation]);
+
+  const renderFormFields = () => {
+    switch (userType) {
+      case "organization":
+        return (
+          <>
+            <CustomInput
+              label="Phone Number"
+              value={profileData.phone_number}
+              onChangeText={(value) => handleChange("phone_number", value)}
+              placeholder="Enter phone number"
+            />
+            <CustomInput
+              label="Address"
+              value={profileData.address}
+              onChangeText={(value) => handleChange("address", value)}
+              placeholder="Enter address"
+            />
+            <CustomInput
+              label="Name"
+              value={profileData.name}
+              onChangeText={(value) => handleChange("name", value)}
+              placeholder="Enter organization name"
+            />
+            <CustomInput
+              label="Registration Number"
+              value={profileData.registration_number}
+              onChangeText={(value) =>
+                handleChange("registration_number", value)
+              }
+              placeholder="Enter registration number"
+            />
+            <CustomInput
+              label="Description"
+              value={profileData.description}
+              onChangeText={(value) => handleChange("description", value)}
+              placeholder="Enter description"
+            />
+          </>
+        );
+      case "driver":
+        return (
+          <>
+            <CustomInput
+              label="Phone Number"
+              value={profileData.phone_number}
+              onChangeText={(value) => handleChange("phone_number", value)}
+              placeholder="Enter phone number"
+            />
+            <CustomInput
+              label="Address"
+              value={profileData.address}
+              onChangeText={(value) => handleChange("address", value)}
+              placeholder="Enter address"
+            />
+            <CustomInput
+              label="Name"
+              value={profileData.name}
+              onChangeText={(value) => handleChange("name", value)}
+              placeholder="Enter driver name"
+            />
+            <CustomInput
+              label="License Number"
+              value={profileData.license_number}
+              onChangeText={(value) => handleChange("license_number", value)}
+              placeholder="Enter license number"
+            />
+            <CustomInput
+              label="Experience (Years)"
+              value={profileData.experience.toString()}
+              onChangeText={(value) => handleChange("experience", value)}
+              placeholder="Enter years of experience"
+              keyboardType="numeric"
+            />
+            <CustomCheckbox
+              label="Availability Status"
+              value={profileData.availability_status}
+              onValueChange={(newValue) =>
+                handleChange("availability_status", newValue)
+              }
+            />
+          </>
+        );
+      case "passenger":
+        return (
+          <>
+            <CustomInput
+              label="Phone Number"
+              value={profileData.phone_number}
+              onChangeText={(value) => handleChange("phone_number", value)}
+              placeholder="Enter phone number"
+            />
+            <CustomInput
+              label="Address"
+              value={profileData.address}
+              onChangeText={(value) => handleChange("address", value)}
+              placeholder="Enter address"
+            />
+            <CustomInput
+              label="Name"
+              value={profileData.name}
+              onChangeText={(value) => handleChange("name", value)}
+              placeholder="Enter passenger name"
+            />
+            <CustomInput
+              label="Emergency Contact Name"
+              value={profileData.emergency_contact_name}
+              onChangeText={(value) =>
+                handleChange("emergency_contact_name", value)
+              }
+              placeholder="Enter emergency contact name"
+            />
+            <CustomInput
+              label="Emergency Contact Number"
+              value={profileData.emergency_contact_number}
+              onChangeText={(value) =>
+                handleChange("emergency_contact_number", value)
+              }
+              placeholder="Enter emergency contact number"
+            />
+            <CustomInput
+              label="Preferred Language"
+              value={profileData.preferred_language}
+              onChangeText={(value) =>
+                handleChange("preferred_language", value)
+              }
+              placeholder="Enter preferred language"
+            />
+          </>
+        );
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <View className="flex-1">
+      {/* Back Button */}
+      <View className="p-2">
+        <Icon
+          name="arrow-left"
+          size={24}
+          color="#000"
+          onPress={() => navigation.goBack()}
+          style={{ marginBottom: 10 }}
+        />
+      </View>
+
+      <ScrollView className="flex-1 bg-background p-4">
+        <View className="rounded-lg bg-primary p-4 py-10 shadow-2xl">
+          {renderFormFields()}
+          <Button title="Update Profile" onPress={handleSubmit} />
+        </View>
+      </ScrollView>
+      <BottomMenu />
+    </View>
+  );
+};
+
+export default ProfileForm;
+
+
+
+##updated profile Forms
+
+import React, { useState, useEffect, useCallback } from "react";
+import { View, Button, ScrollView, Text } from "react-native";
+import { putOrgUserProfile } from "../../../api/users/request";
+import { useSelector } from "react-redux";
+import CustomInput from "../CustomInput";
+import BottomMenu from "../../menu/BottomMenu";
+import { useNavigation } from "@react-navigation/native";
+import { showMessage } from "react-native-flash-message";
+import Icon from "react-native-vector-icons/FontAwesome";
+import CustomCheckbox from "../CustomCheckbox";
+
+// Utility to filter unnecessary fields before submission
+const filterProfileData = (data, userType) => {
+  const commonFields = ["phone_number", "profile_image", "address", "date_of_birth", "name"];
+
+  const fieldsByType = {
+    organization: [...commonFields, "registration_number", "description", "logo"],
+    driver: [...commonFields, "license_number", "experience", "availability_status"],
+    passenger: [...commonFields, "emergency_contact_name", "emergency_contact_number", "preferred_language"],
+  };
+
+  const allowedFields = fieldsByType[userType] || [];
+  return Object.keys(data)
+    .filter((key) => allowedFields.includes(key))
+    .reduce((obj, key) => ({ ...obj, [key]: data[key] }), {});
+};
+
+const ProfileForm = ({ route }) => {
+  const navigation = useNavigation();
+  const token = useSelector((state) => state.auth.token.token);
+  const userType = useSelector((state) => state.auth.user_type);
+  const Data = route.params.profileData;
+
+  const [profileData, setProfileData] = useState({
+    phone_number: "",
+    profile_image: null,
+    address: "",
+    date_of_birth: null,
+    name: "",
+    registration_number: "",
+    description: "",
+    logo: null,
+    emergency_contact_name: "",
+    emergency_contact_number: "",
+    preferred_language: "",
+    license_number: "",
+    experience: "",
+    availability_status: false,
+  });
+
+  // Populating profile data from the route params
+  useEffect(() => {
+    if (Data) {
+      setProfileData((prev) => ({
+        ...prev,
+        phone_number: Data.phone_number || "",
+        profile_image: Data.profile_image || null,
+        address: Data.address || "",
+        date_of_birth: Data.date_of_birth || null,
+        name: Data.username || "",
+        registration_number: Data.registration_number || "",
+        description: Data.description || "",
+        logo: Data.logo || null,
+        emergency_contact_name: Data.emergency_contact_name || "",
+        emergency_contact_number: Data.emergency_contact_number || "",
+        preferred_language: Data.preferred_language || "",
+        license_number: Data.license_number || "",
+        experience: Data.experience || "",
+        availability_status: Data.availability_status || false,
+      }));
+    }
+  }, [Data]);
+
+  const handleImageChange = (newImage) =>{
+    setProfileData((prevData) => ({ ...prevData, profile_image: newImage }));
+  }
+
+  const handleChange = (name, value) => {
+    setProfileData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = useCallback(async () => {
+    const filteredData = filterProfileData(profileData, userType);
+
+    // Debug: Log filtered data and token
+    console.log("Filtered Data:", filteredData);
+    console.log("Token:", token);
+
+    try {
+      const response = await putOrgUserProfile(token, filteredData);
+
+      // Debug: Log response
+      console.log("API Response:", response);
+
+      if (response && response.status === "success") {
+        showMessage({
+          message: "Success",
+          description: "Profile updated successfully",
+          type: "success",
+        });
+        navigation.navigate("Home");
+      } else {
+        showMessage({
+          message: "Error",
+          description: response?.message || "Failed to update profile",
+          type: "danger",
+        });
+      }
+    } catch (error) {
+      // Debug: Log error details
+      console.error("Update Error:", error);
+      showMessage({
+        message: "Error",
+        description: error.message || "An error occurred while updating the profile",
+        type: "danger",
+      });
+    }
+  }, [profileData, token, userType, navigation]);
+
+  const renderInputField = ({ label, name, placeholder, type, keyboardType }) => {
+    if (type === "checkbox") {
+      return (
+        <CustomCheckbox
+          key={name}
+          label={label}
+          value={profileData[name]}
+          onValueChange={(newValue) => handleChange(name, newValue)}
+        />
+      );
+    } else {
+      return (
+        <CustomInput
+          key={name}
+          label={label}
+          value={profileData[name]}
+          onChangeText={(value) => handleChange(name, value)}
+          placeholder={placeholder}
+          keyboardType={keyboardType}
+        />
+      );
+    }
+  };
+
+  const fieldsByUserType = {
+    organization: [
+      { label: "Phone Number", name: "phone_number", placeholder: "Enter phone number" },
+      { label: "Address", name: "address", placeholder: "Enter address" },
+      { label: "Name", name: "name", placeholder: "Enter organization name" },
+      { label: "Registration Number", name: "registration_number", placeholder: "Enter registration number" },
+      { label: "Description", name: "description", placeholder: "Enter description" },
+
+    ],
+    driver: [
+      { label: "Phone Number", name: "phone_number", placeholder: "Enter phone number" },
+      { label: "Address", name: "address", placeholder: "Enter address" },
+      { label: "Name", name: "name", placeholder: "Enter driver name" },
+      { label: "License Number", name: "license_number", placeholder: "Enter license number" },
+      { label: "Experience (Years)", name: "experience", placeholder: "Enter years of experience", keyboardType: "numeric" },
+      { type: "checkbox", label: "Availability Status", name: "availability_status" },
+    ],
+    passenger: [
+      { label: "Phone Number", name: "phone_number", placeholder: "Enter phone number" },
+      { label: "Address", name: "address", placeholder: "Enter address" },
+      { label: "Name", name: "name", placeholder: "Enter passenger name" },
+      { label: "Emergency Contact Name", name: "emergency_contact_name", placeholder: "Enter emergency contact name" },
+      { label: "Emergency Contact Number", name: "emergency_contact_number", placeholder: "Enter emergency contact number" },
+      { label: "Preferred Language", name: "preferred_language", placeholder: "Enter preferred language" },
+    ],
+  };
+
+  return (
+    <View className="flex-1">
+      {/* Back Button */}
+      <View className="p-2">
+        <Icon
+          name="arrow-left"
+          size={24}
+          color="#000"
+          onPress={() => navigation.goBack()}
+          style={{ marginBottom: 10 }}
+        />
+      </View>
+
+      <ScrollView className="flex-1 bg-background p-4">
+        <View className="rounded-lg bg-primary p-4 py-10 shadow-2xl">
+          {fieldsByUserType[userType]?.map(renderInputField)}
+          <Button title="Update Profile" onPress={handleSubmit} />
+        </View>
+      </ScrollView>
+      <BottomMenu />
+    </View>
+  );
+};
+
+export default ProfileForm;
+
+
+
+//updated working code profile form (updated)
+import React, { useState, useEffect, useCallback } from "react";
+import { View, Button, ScrollView } from "react-native";
+import { putOrgUserProfile } from "../../../api/users/request";
+import { useSelector } from "react-redux";
+import CustomInput from "../CustomInput";
+import BottomMenu from "../../menu/BottomMenu";
+import { useNavigation } from "@react-navigation/native";
+import { showMessage } from "react-native-flash-message";
+import Icon from "react-native-vector-icons/FontAwesome";
+import CustomCheckbox from "../CustomCheckbox";
+
+// Utility to filter unnecessary fields before submission
+const filterProfileData = (data, userType) => {
+  const commonFields = ["phone_number", "profile_image", "address", "date_of_birth", "name"];
+  
+  const fieldsByType = {
+    organization: [...commonFields, "registration_number", "description", "logo"],
+    driver: [...commonFields, "license_number", "experience", "availability_status"],
+    passenger: [...commonFields, "emergency_contact_name", "emergency_contact_number", "preferred_language"],
+  };
+
+  const allowedFields = fieldsByType[userType] || [];
+  return Object.keys(data)
+    .filter(key => allowedFields.includes(key))
+    .reduce((obj, key) => ({ ...obj, [key]: data[key] }), {});
+};
+
+const ProfileForm = ({ route }) => {
+  const navigation = useNavigation();
+  const token = useSelector((state) => state.auth.token.token);
+  const userType = useSelector((state) => state.auth.user_type);
+  const Data = route.params.profileData;
+
+  const [profileData, setProfileData] = useState({
+    phone_number: "",
+    profile_image: null,
+    address: "",
+    date_of_birth: null,
+    name: "",
+    registration_number: "",
+    description: "",
+    logo: null,
+    emergency_contact_name: "",
+    emergency_contact_number: "",
+    preferred_language: "",
+    license_number: "",
+    experience: "",
+    availability_status: false,
+  });
+
+  useEffect(() => {
+    if (Data) {
+      setProfileData((prev) => ({
+        ...prev,
+        phone_number: Data.phone_number || "",
+        profile_image: Data.profile_image || null,
+        address: Data.address || "",
+        date_of_birth: Data.date_of_birth || null,
+        name: Data.username || "",
+        registration_number: Data.registration_number || "",
+        description: Data.description || "",
+        logo: Data.logo || null,
+        emergency_contact_name: Data.emergency_contact_name || "",
+        emergency_contact_number: Data.emergency_contact_number || "",
+        preferred_language: Data.preferred_language || "",
+        license_number: Data.license_number || "",
+        experience: Data.experience || "",
+        availability_status: Data.availability_status || false,
+      }));
+    }
+  }, [Data]);
+
+  const handleChange = (name, value) => {
+    setProfileData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = useCallback(async () => {
+    const filteredData = filterProfileData(profileData, userType);
+
+    try {
+      const response = await putOrgUserProfile(token, filteredData);
+
+      if (response) {
+        showMessage({
+          message: "Success",
+          description: "Profile updated successfully",
+          type: "success",
+        });
+        navigation.navigate("Home");
+      } else {
+        showMessage({
+          message: "Error",
+          description: "Failed to update profile",
+          type: "danger",
+        });
+      }
+    } catch (error) {
+      showMessage({
+        message: "Error",
+        description: "An error occurred while updating the profile",
+        type: "danger",
+      });
+    }
+  }, [profileData, token, userType, navigation]);
+
+  const renderInputField = ({ label, name, placeholder, type, keyboardType }) => {
+    if (type === "checkbox") {
+      return (
+        <CustomCheckbox
+          key={name}
+          label={label}
+          value={profileData[name]}
+          onValueChange={(newValue) => handleChange(name, newValue)}
+        />
+      );
+    } else {
+      return (
+        <CustomInput
+          key={name}
+          label={label}
+          value={profileData[name]}
+          onChangeText={(value) => handleChange(name, value)}
+          placeholder={placeholder}
+          keyboardType={keyboardType}
+        />
+      );
+    }
+  };
+
+  const fieldsByUserType = {
+    organization: [
+      { label: "Phone Number", name: "phone_number", placeholder: "Enter phone number" },
+      { label: "Address", name: "address", placeholder: "Enter address" },
+      { label: "Name", name: "name", placeholder: "Enter organization name" },
+      { label: "Registration Number", name: "registration_number", placeholder: "Enter registration number" },
+      { label: "Description", name: "description", placeholder: "Enter description" },
+    ],
+    driver: [
+      { label: "Phone Number", name: "phone_number", placeholder: "Enter phone number" },
+      { label: "Address", name: "address", placeholder: "Enter address" },
+      { label: "Name", name: "name", placeholder: "Enter driver name" },
+      { label: "License Number", name: "license_number", placeholder: "Enter license number" },
+      { label: "Experience (Years)", name: "experience", placeholder: "Enter years of experience", keyboardType: "numeric" },
+      { type: "checkbox", label: "Availability Status", name: "availability_status" },
+    ],
+    passenger: [
+      { label: "Phone Number", name: "phone_number", placeholder: "Enter phone number" },
+      { label: "Address", name: "address", placeholder: "Enter address" },
+      { label: "Name", name: "name", placeholder: "Enter passenger name" },
+      { label: "Emergency Contact Name", name: "emergency_contact_name", placeholder: "Enter emergency contact name" },
+      { label: "Emergency Contact Number", name: "emergency_contact_number", placeholder: "Enter emergency contact number" },
+      { label: "Preferred Language", name: "preferred_language", placeholder: "Enter preferred language" },
+    ],
+  };
+
+  return (
+    <View className="flex-1">
+      {/* Back Button */}
+      <View className="p-2">
+        <Icon
+          name="arrow-left"
+          size={24}
+          color="#000"
+          onPress={() => navigation.goBack()}
+          style={{ marginBottom: 10 }}
+        />
+      </View>
+
+      <ScrollView className="flex-1 bg-background p-4">
+        <View className="rounded-lg bg-primary p-4 py-10 shadow-2xl">
+          {fieldsByUserType[userType]?.map(renderInputField)}
+          <Button title="Update Profile" onPress={handleSubmit} />
+        </View>
+      </ScrollView>
+      <BottomMenu />
+    </View>
+  );
+};
+
+export default ProfileForm;
+
+export default ProfileForm;
+
+//updated ImageUpload
+
+import React, { useState } from 'react';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
+
+const ImageUpload = ({ onImageSelected }) => {
+  const [image, setImage] = useState(null);
+    
+  const handleImageChange = async () => {
+    const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    if (status !== 'granted') {
+      alert('Sorry, we need camera roll permissions to make this work!');
+      return;
+    }
+
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [1, 1],
+      quality: 1,
+    });
+
+    if (!result.canceled) {
+      const selectedImage = result.assets[0];
+      console.log("selected image",selectedImage)
+      setImage(selectedImage.uri);
+      onImageSelected(selectedImage.uri); // Pass the URI to the parent component
+    }
+  };
+
+  return (
+    <View className="flex-1 items-center mb-4">
+      {image && <Image source={{ uri: image }} style={{ width: 100, height: 100, borderRadius: 50 }} />}
+      <TouchableOpacity onPress={handleImageChange} className="mt-2 p-2 rounded bg-accent">
+        <Text className="text-white">Change Profile Image</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+
+export default ImageUpload;
+
+
+
+// src/components/VehicleDetailView.js
+
+import React, { useCallback } from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+  StyleSheet,
+  Image,
+  Alert,
+} from "react-native";
+import { useSelector } from "react-redux";
+import { getTripData, getVehicleData } from "../../api/orgnization/request";
+import { handleApiError } from "../../utils/errorHandler";
+import { useFocusEffect } from "@react-navigation/native";
+import { MEDIA_URL } from "../../api/base";
+import Vehicle from "../../images/vehicle.jpg";
+import { Ionicons } from "@expo/vector-icons"; // Make sure you have expo vector icons installed
+
+const VehicleDetailView = ({ navigation }) => {
+  const token = useSelector((state) => state.auth?.token?.token);
+  const [vehicles, setVehicles] = React.useState([]);
+  const [vehicleTrips, setVehicleTrips] = React.useState({});
+  const user_type = useSelector((state) => state.auth.user_type);
+  const getData = async (token) => {
+    try {
+      const response = await getVehicleData(token);
+      // console.log("vehicle data", response.data);
+      setVehicles(response.data);
+      handleTrips(token, response.data);
+    } catch (error) {
+      console.log(error);
+      handleApiError(error);
+    }
+  };
+
+  const handleTrips = async (token, vehicles) => {
+    const trips = [];
+    const vehicle_trip_check = [];
+    vehicle_trip_check.push(...vehicles)
+    const res = await getTripData(token);
+    trips.push(...res.data);
+
+    if (trips.length > 0) {
+      filtered_vehicle_by_trips_driver = trips.filter((trip) => {
+        let filtered_data = vehicle_trip_check.filter(vehicle=>{
+          console.log("trip driver",trip.driver)
+          console.log("vehicle driver",vehicle.driver)
+          if (trip.driver===vehicle.driver){
+            setVehicleTrips[vehicle.driver] = vehicle.driver
+          }
+        })
+      });
+      console.log(filtered_vehicle_by_trips_driver);
+    }
+    console.log(trips);
+    // const filtered_by_Vehicle_trip_assigned =
+  };
+  
+  useFocusEffect(
+    useCallback(() => {
+      if (token) {
+        getData(token);
+      } else {
+        console.log("Token is not available");
+      }
+    }, [token])
+  );
+
+  const handleView = (vehicle) => {
+    navigation.navigate("Vehicle", { vehicleId: vehicle.registration_number });
+  };
+
+  const handleEdit = (vehicle) => {
+    navigation.navigate("VehicleEdit", {
+      vehicleId: vehicle.registration_number,
+      vehicle: vehicle,
+    });
+  };
+
+  const handleDelete = (vehicleId) => {
+    // Implement the delete functionality here
+    Alert.alert(`Delete in maintenance: ${vehicleId}`);
+    console.log("Delete vehicle with ID:", vehicleId);
+  };
+
+  const handleAddVehicle = () => {
+    navigation.navigate("VehicleForm");
+  };
+
+  const handleAddTrip = (vehicle) => {
+    navigation.navigate("TripForm", { vehicleId: vehicle.registration_number });
+  };
+  console.log("trip filtered ", vehicleTrips)
+  return (
+    <ScrollView className="flex-1 bg-background p-4">
+      {user_type === "organization" && (
+        <TouchableOpacity
+          className="bg-accent p-4 rounded-lg flex-row items-center justify-center mb-4"
+          onPress={handleAddVehicle}
+        >
+          <Ionicons name="add-circle-outline" size={24} color="#FFF" />
+          <Text className="text-white font-semibold ml-2">Add Vehicle</Text>
+        </TouchableOpacity>
+      )}
+
+      {vehicles.length > 0 ? (
+        vehicles.map((vehicle, index) => (
+          <View
+            key={index}
+            className="bg-primary p-4 mb-4 rounded-lg shadow-md"
+          >
+            <Image
+              source={
+                vehicle.image
+                  ? { uri: `${MEDIA_URL}/${vehicle.image}` }
+                  : Vehicle
+              }
+              style={styles.vehicleImage}
+            />
+            <Text className="text-lg text-white font-semibold">
+              {vehicle.model}
+            </Text>
+            <Text className="text-sm text-background">
+              {vehicle.company_made} - {vehicle.license_plate_number}
+            </Text>
+            <Text className="text-sm text-background">
+              Seating Capacity: {vehicle.seating_capacity}
+            </Text>
+            <Text className="text-sm text-background">
+              Available Seats: {vehicle.available_seat}
+            </Text>
+            <Text className="text-sm text-background">
+              Driver: {vehicle.driver}
+            </Text>
+            <View className="flex-row justify-between mt-4">
+              <TouchableOpacity
+                className="bg-background p-2 rounded-lg"
+                onPress={() => handleView(vehicle)}
+              >
+                <Text className="text-primary text-center">View</Text>
+              </TouchableOpacity>
+              {user_type === "organization" && (
+                <>
+                  <TouchableOpacity
+                    className="bg-orange-400 p-2 rounded-lg"
+                    onPress={() => handleEdit(vehicle)}
+                  >
+                    <Text className="text-primary-on-dark text-center">
+                      Edit
+                    </Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    className="bg-red-500 p-2 rounded-lg"
+                    onPress={() => handleDelete(vehicle.id)}
+                  >
+                    <Text className="text-primary-on-dark text-center">
+                      Delete
+                    </Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    className="bg-red-500 p-2 rounded-lg"
+                    onPress={() => handleAddTrip(vehicle)}
+                  >
+                    <Text className="text-primary-on-dark text-center">
+                      Add Trip
+                    </Text>
+                  </TouchableOpacity>
+                </>
+              )}
+            </View>
+          </View>
+        ))
+      ) : (
+        <View className="flex-1 justify-center items-center">
+          <Text className="text-secondary-text">No vehicles found.</Text>
+        </View>
+      )}
+    </ScrollView>
+  );
+};
+
+const styles = StyleSheet.create({
+  vehicleImage: {
+    width: 200,
+    height: 100,
+    borderRadius: 8,
+  },
+});
+
+export default VehicleDetailView;

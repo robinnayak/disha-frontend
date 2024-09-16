@@ -1,0 +1,77 @@
+http://localhost:8000/auth/login/
+{
+  "message": "User logged in successfully",
+  "user": {
+    "id": 10,
+    "username": "Greentech",
+    "email": "Greentech@email.com",
+    "is_organization": true,
+    "is_driver": false,
+    "is_passenger": false
+  },
+  "token": {
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyNTAzMDExMywiaWF0IjoxNzI0OTQzNzEzLCJqdGkiOiIwNTRlZmE0ZTA3ZjY0OGE1OWRkMGI3Yzg1NWJhY2Y0NCIsInVzZXJfaWQiOjEwfQ.MI-rWxfMFoz3KRhaB_E9uRdYNd-ea0Zx_AgpFMsWvZo",
+    "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1MDMwMTEzLCJpYXQiOjE3MjQ5NDM3MTMsImp0aSI6ImY2NjA0YWM2YjVkMzQ4YzM5ZDg0OGEyMzc0NzhjYmJjIiwidXNlcl9pZCI6MTB9.B6RpOkIk3cYaOBLcXcjjB2XkXH8mzCrwD-Fqd0FaOtI"
+  }
+}
+
+http://localhost:8000/api/profile/
+{
+  "status": "success",
+  "data": {
+    "id": 5,
+    "user_id": 10,
+    "username": "Greentech",
+    "phone_number": "",
+    "profile_image": null,
+    "address": "",
+    "date_of_birth": null,
+    "name": null,
+    "registration_number": "ORG-TE4BD4-62893455961956",
+    "description": null,
+    "logo": null,
+    "total_earnings": "0.00",
+    "remaining_earnings": "0.00",
+    "date_created": "2024-08-27T22:31:13.339334+05:45",
+    "user": 10
+  }
+}
+
+Driver:
+{
+  "status": "success",
+  "data": {
+    "id": 5,
+    "username": "ray",
+    "phone_number": "",
+    "profile_image": null,
+    "address": "",
+    "date_of_birth": null,
+    "license_number": "XBZ123ASD0",
+    "experience": 1,
+    "availability_status": true,
+    "total_earnings": "0.00",
+    "remaining_earnings": "0.00",
+    "date_created": "2024-08-29T21:03:08.497832+05:45",
+    "user": 15,
+    "organization": null
+  }
+}
+
+passenger 
+{
+  "status": "success",
+  "data": {
+    "id": 6,
+    "username": "Arun",
+    "phone_number": "",
+    "profile_image": null,
+    "address": "",
+    "date_of_birth": null,
+    "emergency_contact_name": "",
+    "emergency_contact_number": "",
+    "preferred_language": "",
+    "loyalty_points": 0,
+    "user": 11
+  }
+}
