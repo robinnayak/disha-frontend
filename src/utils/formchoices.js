@@ -19,4 +19,6 @@ export const tripChoices = [
   { label: "Namche Bazaar", value: "namche_bazaar" },
   { label: "Manang", value: "manang" },
   { label: "Lukla", value: "lukla" },
+  { label: "Jaleswor", value: "jaleswor" },
+  { label: "Mathayani", value: "mathayani" },
 ];
