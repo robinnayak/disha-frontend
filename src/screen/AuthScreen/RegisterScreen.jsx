@@ -71,6 +71,20 @@ const RegisterScreen = () => {
       });
       return;
     }
+    // Password validation: Check length and special character
+    const passwordRegex =
+      /^(?=.*[!@#$%^&*(),.?":{}|<>])(?=.*[a-zA-Z])(?=.*[0-9]).{8,}$/;
+
+    if (!passwordRegex.test(user.password)) {
+      showMessage({
+        message: "Password Error",
+        description:
+          "Password must be at least 8 characters long, contain at least one special character, one letter, and one number.",
+        type: "danger",
+      });
+      return;
+    }
+
     if (user.password !== user.password2) {
       showMessage({
         message: "Error",
@@ -79,15 +93,15 @@ const RegisterScreen = () => {
       });
       return;
     }
-    
-    if (user.is_driver){
-      if (!user.license_number.trim()){
-      showMessage({
-        message: "Validation Error",
-        description: "Please fill in the required license number field.",
-        type: "danger",
-      });
-      return;
+
+    if (user.is_driver) {
+      if (!user.license_number.trim()) {
+        showMessage({
+          message: "Validation Error",
+          description: "Please fill in the required license number field.",
+          type: "danger",
+        });
+        return;
       }
     }
 
@@ -108,7 +122,7 @@ const RegisterScreen = () => {
     try {
       const response = await registerUser(user); // Use Axios request
       setLoading(false);
-      
+
       // Check if the response data exists and handle it accordingly
       if (response.data && response.data.user) {
         showMessage({
@@ -119,11 +133,12 @@ const RegisterScreen = () => {
       } else {
         showMessage({
           message: "Success",
-          description: "Registration successful! Please check your email for the verification link.",
+          description:
+            "Registration successful! Please check your email for the verification link.",
           type: "success",
         });
       }
-      
+
       // Redirect to the login page or show a confirmation page
       navigation.navigate("Login");
     } catch (error) {
