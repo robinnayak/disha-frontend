@@ -42,7 +42,7 @@ const ToBookDetail = ({ route }) => {
 
     try {
       const res = await postBookingData(token, bookingDetails); // Ensure this function sends the correct data format
-      console.log("id", res.data);
+      // console.log("id", res.data);
       showMessage({
         message: "Booking Confirmed",
         type: "success",

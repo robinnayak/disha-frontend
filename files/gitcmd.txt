@@ -1,0 +1,109 @@
+
+Switching branches, working on them, and later deleting them in Git is a common workflow. Here's a step-by-step guide to help you through the process:
+
+### Switching Branches and Working with Them
+
+1. **List All Branches:**
+   ```bash
+   git branch
+   ```
+   This command lists all the branches in your repository. The current branch will be highlighted with an asterisk (*).
+
+2. **Switch to a Different Branch:**
+   You can use either `git checkout` or `git switch` to change branches.
+
+   - Using `git checkout`:
+     ```bash
+     git checkout <branch_name>
+     ```
+   - Using `git switch` (introduced in Git 2.23+):
+     ```bash
+     git switch <branch_name>
+     ```
+
+3. **Create and Switch to a New Branch:**
+   - Using `git checkout`:
+     ```bash
+     git checkout -b <new_branch_name>
+     ```
+   - Using `git switch`:
+     ```bash
+     git switch -c <new_branch_name>
+     ```
+
+4. **Make Changes and Commit:**
+   Work on your branch as needed. After making changes, add and commit them:
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   ```
+
+### Deleting a Branch
+
+1. **Switch to Another Branch:**
+   Before deleting a branch, make sure you are not currently on the branch you want to delete. Switch to another branch, such as `main`:
+   ```bash
+   git checkout main
+   ```
+
+2. **Delete the Branch Locally:**
+   - To delete a branch locally:
+     ```bash
+     git branch -d <branch_name>
+     ```
+   - If the branch has not been merged, you can force delete it:
+     ```bash
+     git branch -D <branch_name>
+     ```
+
+3. **Delete the Branch Remotely:**
+   - To delete a branch from the remote repository:
+     ```bash
+     git push origin --delete <branch_name>
+     ```
+
+### Example Workflow
+
+1. **Create and Switch to a New Branch:**
+   ```bash
+   git switch -c feature-branch
+   ```
+
+2. **Work on the Branch:**
+   Make your changes, then add and commit them:
+   ```bash
+   git add .
+   git commit -m "Add new feature"
+   ```
+
+3. **Switch Back to Main:**
+   ```bash
+   git switch main
+   ```
+
+4. **Merge the Feature Branch into Main:**
+   ```bash
+   git merge feature-branch
+   ```
+
+5. **Delete the Feature Branch Locally:**
+   ```bash
+   git branch -d feature-branch
+   ```
+
+6. **Delete the Feature Branch Remotely:**
+   ```bash
+   git push origin --delete feature-branch
+   ```
+
+This workflow allows you to create, switch, work on, and delete branches efficiently. Let me know if you have any more questions or need further assistance! 😊
+
+Source: Conversation with Copilot, 9/17/2024
+(1) Git Tutorial 6: Branches (Create, Merge, Delete a branch). https://www.youtube.com/watch?v=sgzkY5vFKQQ.
+(2) Git Branch: create, switch/checkout, list, delete, push. https://www.youtube.com/watch?v=wQ9eC_9hE90.
+(3) How to create Git Branch | Merge Git Branch to Master | Delete Branch from Remote Git using Git Bash. https://www.youtube.com/watch?v=8x7QcF9LG7I.
+(4) How to Switch Branch in Git? - GeeksforGeeks. https://www.geeksforgeeks.org/how-to-switch-branch-in-git/.
+(5) Git - Basic Branching and Merging. https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging.
+(6) Git Branch Explained: How to Delete, Checkout, Create, and Rename a .... https://www.freecodecamp.org/news/git-branch-explained-how-to-delete-checkout-create-and-rename-a-branch-in-git/.
+(7) How to Use Branches in Git – the Ultimate Cheatsheet - freeCodeCamp.org. https://www.freecodecamp.org/news/how-to-use-branches-in-git/.
+(8) undefined. https://shihabiiuc.com/git-branch/.

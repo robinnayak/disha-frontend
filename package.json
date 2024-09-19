@@ -4,8 +4,8 @@
   "main": "expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web"
   },
   "dependencies": {
@@ -46,5 +46,8 @@
     "@babel/core": "^7.20.0",
     "tailwindcss": "3.3.2"
   },
-  "private": true
+  "private": true,
+  "repository": "https://github.com/robinnayak/disha-frontend.git",
+  "author": "robinnayak <robinnayak86@gmail.com>",
+  "license": "MIT"
 }

@@ -7,6 +7,8 @@ import { updateTripCompleted } from "../../../api/driver/request";
 import { postDailyEarnings } from "../../../api/booking/request"; // Import the postDailyEarnings function
 import { handleApiError } from "../../../utils/errorHandler";
 import { useSelector } from "react-redux";
+import { showMessage } from "react-native-flash-message";
+import { deleteTripData } from "../../../api/orgnization/request";
 
 const TripView = ({ route, navigation }) => {
   const trip = route.params?.trip;
@@ -94,9 +96,24 @@ const TripView = ({ route, navigation }) => {
   };
 
   // Handle Delete Trip
-  const handleDeleteTrip = () => {
-    console.log("Trip deleted");
-    navigation.goBack(); // Navigate back after deleting the trip
+  const handleDeleteTrip =async () => {
+
+    console.log("Trip deleted",trip_id);
+    try{
+      const res = await deleteTripData(token,trip_id)
+      console.log("deleted trip..", res);
+      showMessage(
+        {
+          message: "Trip deleted successfully",
+          type: "success",
+        }
+      )
+      navigation.goBack(); // Navigate back after deleting the trip
+    }
+      catch (error){
+        console.error("Error deleting trip:", error);
+        handleApiError(error);
+      }
   };
 
   // Handle Daily Earnings

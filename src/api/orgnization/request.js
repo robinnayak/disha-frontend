@@ -53,32 +53,17 @@ export const putVehicleViewData = async (token, vehicleId, credential) => {
 
 // http://localhost:8000/api/organization/vehicles/VEH-GR-2096/
 
-
-
 export const deleteVehicleViewData = async (token, vehicleId) => {
-  console.log("delete vehicle id",vehicleId)
-  try {
-    const res = await axios.delete(`${org_vehicles_api}${vehicleId}/`, {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    console.log("deleted vehicle..",res);
-    return res;
-  } catch (error) {
-    if (error.response) {
-      // Server responded with a status other than 200 range
-      console.error("Error response:", error.response.data);
-    } else if (error.request) {
-      // Request was made but no response received
-      console.error("Error request:", error.request);
-    } else {
-      // Something else happened while setting up the request
-      console.error("Error message:", error.message);
-    }
-    throw error;
-  }
+  console.log("delete vehicle id", vehicleId);
+
+  const res = await axios.delete(`${org_vehicles_api}${vehicleId}/`, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  console.log("deleted vehicle..", res);
+  return res;
 };
 
 export const getTripData = async (token) => {
@@ -98,4 +83,17 @@ export const postTripData = async (token, credential) => {
     },
   });
   return res.data;
+};
+
+// http://localhost:8000/api/organization/trips/DHAKAT20240828030817/ , method =delete
+export const deleteTripData = async (token, tripId) => {
+  console.log("delete trip id", tripId);
+
+  const res = await axios.delete(`${org_trip_api}${tripId}/`, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return res.status;
 };

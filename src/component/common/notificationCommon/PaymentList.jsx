@@ -28,7 +28,7 @@ const PaymentList = ({ token, navigation }) => {
   };
 
   const handlePayment = async (payment) => {
-    console.log("payment",payment.transaction_id)
+    // console.log("payment",payment.transaction_id)
     navigation.navigate('PayStatus',{transaction_id:payment.transaction_id})
   };
 

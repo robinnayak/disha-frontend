@@ -19,7 +19,7 @@ const PayStatusScreen = ({ route }) => {
 
   const navigation = useNavigation(); // For navigation
 
-  console.log("trans", trans_id);
+  // console.log("trans", trans_id);
 
   useFocusEffect(
     useCallback(() => {
@@ -30,7 +30,7 @@ const PayStatusScreen = ({ route }) => {
   const fetchPayStatus = async () => {
     try {
       const res = await getPayStatus(token, trans_id);
-      console.log("fetch pay status", res.data);
+      // console.log("fetch pay status", res.data);
       setPaymentStatus(res.data.is_successful);
       setPayData(res.data); // Assign the entire response data to payData
     } catch (error) {
@@ -55,7 +55,7 @@ const PayStatusScreen = ({ route }) => {
   // Function to handle button navigation based on payment status
   const handleNavigation = () => {
     if (paymentStatus) {
-      navigation.navigate("Home"); // Navigate to Home if payment is successful
+      navigation.navigate("Notification"); // Navigate to Home if payment is successful
     } else {
       navigation.navigate("Pay"); // Navigate to Pay if payment is pending
     }

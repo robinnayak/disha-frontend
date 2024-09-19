@@ -3,14 +3,17 @@
 import { Text, View, ScrollView, TouchableOpacity } from "react-native";
 import React from "react";
 import ProfileImage from "./ProfileImage";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { deleteuser } from "../../../api/users/request";
 import { handleApiError } from "../../../utils/errorHandler";
 import Header from "../../menu/Header";
 import BottomMenu from "../../menu/BottomMenu";
 import GoBack from "../../menu/GoBack";
+import { showMessage } from "react-native-flash-message";
+import { setLogout } from "../../../app/features/authSlice";
 
 const ProfileViewScreen = ({ route, navigation }) => {
+  const dispatch = useDispatch()
   const data = route.params?.profileData;
   console.log("profile data", data.profile_image);
   const user_type = route.params?.user_type;
@@ -22,18 +25,24 @@ const ProfileViewScreen = ({ route, navigation }) => {
     // Navigate to the edit profile screen or trigger edit functionality
     navigation.navigate("ProfileForm", { profileData: data });
   };
-
+  
   const handleDeleteProfile = async (token) => {
-    try {
-      // Implement delete profile logic here
-      const res = await deleteuser(token);
-      console.log(res);
+    try{
+      const response = await deleteuser(token);
+      console.log(response);
+      showMessage({
+        message: `Profile deleted successfully ${data.username}`,
+        type: "success",
+      });
+      dispatch(setLogout());
       navigation.navigate("Login");
-    } catch (error) {
+    }
+    catch(error){
+      console.log("profile error",error)
       handleApiError(error);
     }
   };
-
+  
   return (
     <View className="flex-1 bg-background">
       <GoBack navigation={navigation} />

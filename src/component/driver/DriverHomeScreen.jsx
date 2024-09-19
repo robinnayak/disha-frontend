@@ -20,7 +20,7 @@ const DriverHomeScreen = ({ navigation, token }) => {
     try {
       // Fetch user profile data
       const res = await orgUserProfile(token);
-      console.log("res org", res.data);
+      // console.log("res org", res.data);
       setProfileData(res.data);
 
       // Check if organization exists, then fetch organization data

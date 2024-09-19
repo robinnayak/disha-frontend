@@ -21,12 +21,12 @@ export const putOrgUserProfile = async (token,credential)=>{
 }
 
 export const deleteuser = async (token)=>{
+    console.log("profile delete token",token)
     const res = await axios.delete(org_profile_api,{
         headers:{
             Authorization: `Bearer ${token}`
         }
     })
-    return res.data
+    console.log("Profile deleted response",res)
+    return res
 }
-
-
