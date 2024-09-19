@@ -6,10 +6,13 @@ const initialState = {
     id: null,
     username: null,
     email: null,
+
     is_organization: false,
     is_driver: false,
     is_passenger: false,
   },
+  profile_image: null, // Added profile_image field
+  phone_number :null,
   token: "",
   user_type: "",
 };
@@ -38,6 +41,12 @@ const authSlice = createSlice({
     setToken: (state, action) => {
       state.token = action.payload;
     },
+    setProfileImage: (state, action) => {
+      state.profile_image = action.payload; // Update profile image in state
+    },
+    setPhoneNumber: (state, action) => {
+      state.phone_number = action.payload; // Update profile image in state
+    },
     setLogout: (state) => {
       // Resetting to initial state
       state.status = "";
@@ -49,5 +58,5 @@ const authSlice = createSlice({
   },
 });
 
-export const { setUser, setToken, setLogout } = authSlice.actions;
+export const { setUser, setToken, setLogout, setPhoneNumber,setProfileImage } = authSlice.actions;
 export default authSlice.reducer;

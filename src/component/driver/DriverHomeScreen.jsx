@@ -8,12 +8,14 @@ import { handleApiError } from "../../utils/errorHandler";
 import { orgUserProfile } from "../../api/users/request";
 import LoadingAnimation from "../common/LoadingAnimation";
 import { getDriOrgProfile } from "../../api/driver/request";
+import { useDispatch } from "react-redux";
+import { setProfile } from "../../app/features/profileSlice";
 
 const DriverHomeScreen = ({ navigation, token }) => {
   const [loading, setLoading] = useState(false);
   const [profileData, setProfileData] = useState(null);
   const [organizationData, setOrganizationData] = useState(null);
-
+  const dispatch = useDispatch()
   const fetchProfileData = async () => {
     if (!token) return;
     setLoading(true);
@@ -22,7 +24,7 @@ const DriverHomeScreen = ({ navigation, token }) => {
       const res = await orgUserProfile(token);
       // console.log("res org", res.data);
       setProfileData(res.data);
-
+      dispatch(setProfile(res.data))
       // Check if organization exists, then fetch organization data
       if (res.data.organization) {
         const organizationResponse = await getDriOrgProfile(token);

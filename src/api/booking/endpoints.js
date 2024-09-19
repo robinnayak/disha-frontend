@@ -15,3 +15,4 @@ export const ticket_list_api = `${BASE_URL}/${API_ROOT}/tickets/`;
 export const daily_earnings_api = `${BASE_URL}/${API_ROOT}/daily-earnings/create/`;
 // http://localhost:8000/api/booking/daily-earnings/filter/
 export const daily_earnings_list_api = `${BASE_URL}/${API_ROOT}/daily-earnings/filter/`;
+export const reset_trip_api = `${BASE_URL}/${API_ROOT}/reset-trip/`

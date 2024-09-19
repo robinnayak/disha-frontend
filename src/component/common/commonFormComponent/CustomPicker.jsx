@@ -10,11 +10,13 @@ const CustomPicker = ({
   options = [],
   placeholder = "Select an option",
   className,
+  textColor="white",
+  font ="semibold"
 }) => {
   return (
     <View className={`mb-4 ${className}`}>
       {label && (
-        <Text className="mb-2 text-lg font-semibold text-white">{label}</Text>
+        <Text className={`mb-2 text-lg font-${font} text-${textColor}`}>{label}</Text>
       )}
       <Picker
         selectedValue={selectedValue}
