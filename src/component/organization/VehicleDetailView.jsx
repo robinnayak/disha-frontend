@@ -21,6 +21,8 @@ import Vehicle from "../../images/vehicle.jpg";
 import { Ionicons } from "@expo/vector-icons"; // Ensure expo vector icons are installed
 import BottomMenu from "../menu/BottomMenu";
 import Header from "../menu/Header";
+import axios from "axios";
+import { showMessage } from "react-native-flash-message";
 
 const VehicleDetailView = ({ navigation }) => {
   const token = useSelector((state) => state.auth?.token?.token);
@@ -83,11 +85,17 @@ const VehicleDetailView = ({ navigation }) => {
   };
 
   const handleDelete = async (vehicleId) => {
-    console.log("delete id", vehicleId);
+    // console.log("delete id", vehicleId);
     try {
       const res = await deleteVehicleViewData(token, vehicleId);
-      console.log("Delete vehicle with ID:", res);
-      Alert.alert("Success", "Vehicle deleted successfully!");
+      showMessage(
+        {
+          message: "Success",
+          description: `Vehicle deleted successfully!${vehicleId}`,
+          type: "success",
+        },
+        { duration: 2000 }
+      )
       navigation.navigate("Home");
     } catch (error) {
       console.log("Error deleting vehicle:", error);

@@ -44,7 +44,7 @@ const Payment = ({ route }) => {
 
     try {
       const res = await postPayment(token, paymentData);
-      console.log("Payment response data:", res.data);
+      // console.log("Payment response data:", res.data);
       navigation.navigate("PayStatus", { transaction_id: res.data.data.transaction_id });
     } catch (err) {
       console.error("Error processing payment", err);

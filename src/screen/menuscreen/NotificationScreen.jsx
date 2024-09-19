@@ -12,59 +12,7 @@ const NotificationScreen = () => {
   const token = useSelector((state) => state.auth.token.token);
   const user_type = useSelector((state) => state.auth.user_type);
   const navigation = useNavigation();
-  const tickets = [
-    // Sample tickets data
-    {
-      id: 1,
-      title: "Ticket 1",
-      from: "Dharan",
-      to: "Kathmandu",
-      date: "2024-09-12",
-    },
-    {
-      id: 2,
-      title: "Ticket 2",
-      from: "Pokhara",
-      to: "Butwal",
-      date: "2024-09-14",
-    },
-  ];
-
-  const payments = [
-    // Sample payments data
-    {
-      id: 1,
-      method: "Mobile Wallet",
-      amount: "1500.00",
-      status: true,
-      date: "2024-09-01",
-    },
-    {
-      id: 2,
-      method: "Credit Card",
-      amount: "2500.00",
-      status: false,
-      date: "2024-09-05",
-    },
-  ];
-
-  const bookings = [
-    // Sample bookings data
-    {
-      id: 1,
-      booking_id: "BOK-DHAKAT-630214",
-      from: "Dharan",
-      to: "Kathmandu",
-      date: "2024-09-12",
-    },
-    {
-      id: 2,
-      booking_id: "BOK-JANDHA-679725",
-      from: "Janakpur",
-      to: "Dharan",
-      date: "2024-09-14",
-    },
-  ];
+ 
 
   return (
     <View className="flex-1 bg-gray-100">
@@ -107,7 +55,6 @@ const NotificationScreen = () => {
         {activeTab === "tickets" ? (
           <View className="bg-primary p-4 mb-4 rounded-lg shadow-lg">
             <TicketList
-              tickets={tickets}
               navigation={navigation}
               token={token}
               userType={user_type}
@@ -116,7 +63,7 @@ const NotificationScreen = () => {
         ) : activeTab === "bookings" ? (
           <View className="bg-primary p-4 mb-4 rounded-lg shadow-lg">
             <BookingList
-              bookings={bookings}
+
               navigation={navigation}
               token={token}
               userType={user_type}

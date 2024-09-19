@@ -5,7 +5,7 @@ import { MEDIA_URL } from "../../../api/base";
 
 const ProfileImage = ({ uri, loading, width=24,height=32 }) => {
   let urii = `${MEDIA_URL}${uri}`;
-  console.log("uri", urii);
+  // console.log("profile uri", urii);
   const imageUri = urii;
   return (
     <View className="p-1 bg-white rounded-lg">

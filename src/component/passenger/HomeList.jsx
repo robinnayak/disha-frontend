@@ -56,7 +56,6 @@ const HomeList = ({ navigation }) => {
 
   const applyFilters = () => {
     let updatedTrips = trips;
-
     if (filters.date) {
       updatedTrips = updatedTrips.filter(
         (trip) =>
@@ -154,13 +153,13 @@ const HomeList = ({ navigation }) => {
                 key={trip.id}
                 className="bg-primary p-4 mb-6 rounded-lg shadow-md hover:bg-secondary hover:scale-[1.02] transition-transform duration-300 ease-in-out"
               >
-              <ProfileImage uri={trip.vehicle_image} loading={loading} width="full" height={36} />
-              
-                {/* <Image
-                  source={{ uri: `${MEDIA_URL}${trip.vehicle_image}` }}
+              {/* <ProfileImage uri={trip.vehicle_image} loading={loading} width="full" height={36} /> */}
+              {/* vehicle image display in list */}
+                <Image
+                  source={{ uri: `${trip.vehicle_image}` }}
                   className="w-full h-36 rounded-md mb-4"
                   resizeMode="cover"
-                /> */}
+                />
                 <View>
                   <Text className="text-lg font-bold text-white mb-2">
                     {trip.vehicle_type}
