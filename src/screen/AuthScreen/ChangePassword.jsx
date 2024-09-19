@@ -10,6 +10,7 @@ import { showMessage } from "react-native-flash-message";
 import { handleApiError } from "../../utils/errorHandler";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import { change_password } from "../../api/auth/request";
 
 const ChangePassword = ({ navigation }) => {
   const [oldPassword, setOldPassword] = useState("");
@@ -73,16 +74,8 @@ const ChangePassword = ({ navigation }) => {
     try {
       setLoading(true);
 
-      const res = await axios.post(
-        "http://10.0.2.2:8000/api/auth/change-password/",
-        data,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`, // Correct format for Authorization header
-          },
-        }
-      );
-
+      const res = change_password(token, data);
+      console.log("change password response : ",res)
       showMessage({
         message: "Password Changed Successfully",
         description: res.data.message || "Your password has been updated.",
