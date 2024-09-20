@@ -10,18 +10,21 @@ import BottomMenu from "../menu/BottomMenu";
 import ProfileCard from "../common/profile/ProfileCard";
 import LoadingAnimation from "../common/LoadingAnimation";
 import HomeList from "./HomeList";
+import { useDispatch } from "react-redux";
+import { setProfile } from "../../app/features/profileSlice";
 
 const PassengerHomeScreen = ({ navigation, token }) => {
   const [loading, setLoading] = useState(false);
   const [profileData, setProfileData] = useState(null);
   const [tripData, setTripData] = useState([]); // State for trips
-
+  const dispatch = useDispatch()
   const fetchProfileData = async () => {
     if (!token) return;
     setLoading(true);
     try {
       const res = await getDriverProfile(token);
       setProfileData(res.data);
+      dispatch(setProfile(res.data))
       setTripData(res.data.vehicle_trip_data || []); // Assume trips are part of profile data
     } catch (error) {
       handleApiError(error);

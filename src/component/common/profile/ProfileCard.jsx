@@ -112,6 +112,7 @@ const ProfileCard = ({
 
   console.log("profile image",profile_image)
   console.log("prfile data",profileData)
+  
   return (
     <View
       className={`${

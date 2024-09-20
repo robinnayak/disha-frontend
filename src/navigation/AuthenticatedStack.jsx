@@ -25,6 +25,13 @@ import TicketDetail from "../component/common/notificationCommon/TicketDetail";
 import BookingDetail from "../component/common/booking/BookingDetail";
 import DailyEarningsDetail from "../component/organization/trip/DailyEarningsDetail";
 import ChangePassword from "../screen/AuthScreen/ChangePassword";
+import EmergencySupport from "../component/common/settings/sectionlists/EmergencySupport";
+import Help from "../component/common/settings/sectionlists/Help";
+import SupportRequest from "../component/common/settings/sectionlists/SupportRequest";
+import Policies from "../component/common/settings/sectionlists/Policies";
+import Feedback from "../component/common/settings/sectionlists/Feedback";
+import SupportRequestList from "../component/common/settings/sectionlists/SupportRequestList";
+import TermsAndConditions from "../component/common/settings/sectionlists/TermsAndConditions";
 
 const Stack = createNativeStackNavigator();
 
@@ -149,6 +156,43 @@ const AuthenticatedStack = () => {
         component={DailyEarningsDetail}
         options={{ title: "Daily Earnings Detail" }}
       />
+      <Stack.Screen
+        name="EmergencySupport"
+        component={EmergencySupport}
+        options={{ title: "Emergency Support" }}
+      />
+      <Stack.Screen
+        name="Help"
+        component={Help}
+        options={{ title: "Help with QA" }}
+      />
+      <Stack.Screen
+        name="SupportRequest"
+        component={SupportRequest}
+        options={{ title: "Support Request" }}
+      />
+      <Stack.Screen
+        name="Policies"
+        component={Policies}
+        options={{ title: "Policies" }}
+      />
+      <Stack.Screen
+        name="Feedback"
+        component={Feedback}
+        options={{ title: "Feedback" }}
+      />
+      <Stack.Screen
+        name="TermsAndConditions"
+        component={TermsAndConditions}
+        options={{ title: "Terms And Conditions" }}
+      />
+      <Stack.Screen
+        name="SupportRequestList"
+        component={SupportRequestList}
+        options={{ title: "Support Request List" }}
+      />
+
+      
 
     </Stack.Navigator>
   );

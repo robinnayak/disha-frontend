@@ -6,6 +6,7 @@ import {
   ticket_list_api,
   daily_earnings_api,
   daily_earnings_list_api,
+  reset_trip_api,
 } from "./endpoints";
 
 export const postBookingData = async (token, credential) => {
@@ -73,4 +74,14 @@ export const getDailyEarnings = async (token)=>{
     },
   });
   return res.data;
+}
+
+export const reset_trip = async (token,credential)=>{
+  console.log("crediential",credential)
+  const res = await axios.post(reset_trip_api,credential,{
+    headers:{
+      Authorization: `Bearer ${token}`
+    }
+  })
+  return res.data
 }

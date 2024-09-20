@@ -4,9 +4,13 @@ import { Button, Image, View, Alert, Text, TouchableOpacity, ActivityIndicator }
 import axios from "axios";
 import { handleApiError } from "../../utils/errorHandler";
 import { MEDIA_URL } from "../../api/base";
+import { useDispatch } from "react-redux";
+import { setProfileImage } from "../../app/features/authSlice";
 
 const ProfileImageUpload = ({ token, profileUrl, profileImage }) => {
   // Construct the full image URI from the provided profile image path
+  
+  const dispatch = useDispatch()
   const defaultImageUri = `${MEDIA_URL}${profileImage}`;
   console.log('profile image upload', defaultImageUri);
 
@@ -48,7 +52,10 @@ const ProfileImageUpload = ({ token, profileUrl, profileImage }) => {
 
       try {
         const res = await profileUrl(token, formData);
-        // console.log("Image uploaded successfully:", res);
+        console.log("Image uploaded successfully:", res);
+        
+        const uploadImageUrl = `${MEDIA_URL}${res.data.profile_image}`
+        dispatch(setProfileImage(uploadImageUrl))
         setLoading(false); // End the loading state
       } catch (error) {
         console.log("Image upload failed:", error);

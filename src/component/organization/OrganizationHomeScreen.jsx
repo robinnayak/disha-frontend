@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { ScrollView, View, Text, TouchableOpacity } from "react-native";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Header from "../menu/Header";
 import BottomMenu from "../menu/BottomMenu";
 import ProfileCard from "../common/profile/ProfileCard";
@@ -9,18 +9,22 @@ import { orgUserProfile } from "../../api/users/request";
 import { useFocusEffect } from "@react-navigation/native";
 import LoadingAnimation from "../common/LoadingAnimation";
 import { getOrgDrivers } from "../../api/orgnization/request";
+import { setProfile } from "../../app/features/profileSlice";
 
 const OrganizationHomeScreen = ({ navigation, token }) => {
   const [loading, setLoading] = useState(false);
   const [profileData, setProfileData] = useState(null);
   const [driversData, setDriversData] = useState([]);
-
+  const dispatch = useDispatch()
   const fetchProfileData = async () => {
     if (!token) return;
     setLoading(true);
     try {
       const res = await orgUserProfile(token);
       setProfileData(res.data);
+
+      dispatch(setProfile(res.data))
+
       const driversResponse = await getOrgDrivers(token);
       setDriversData(driversResponse.data);
     } catch (error) {

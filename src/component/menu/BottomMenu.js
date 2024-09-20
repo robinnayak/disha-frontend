@@ -84,7 +84,7 @@ const BottomMenu = () => {
         />
         <Text
           className={`text-xs mt-0.5 ${
-            isActive ? "text-white" : "text-secondary-text"
+            isActive ? "text-white" : "text-background"
           }`}
         >
           {item.label}
