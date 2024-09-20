@@ -1,34 +1,55 @@
 import { View, Text, TextInput, Button, ScrollView, ActivityIndicator } from 'react-native';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import SettingImageUpload from './SettingImageUpload';  // Assuming you want image upload
-import CustomPicker from '../../commonFormComponent/CustomPicker';
+import CustomPicker from '../../commonFormComponent/CustomPicker';  // Custom picker component for selecting feedback type
+import { postFeedback } from '../../../../api/users/request';  // Assuming the post request is handled here
+import { showMessage } from 'react-native-flash-message';
+import { useNavigation } from '@react-navigation/native';
 
-const Feedback = ({ token }) => {
-  const email = useSelector(state => state.auth?.user?.user.email);  // Fetch user's email from Redux store
+const Feedback = () => {
   const [feedbackType, setFeedbackType] = useState('');
   const [comments, setComments] = useState('');
-  const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
-
+  const token = useSelector(state=>state.auth?.token?.token)
+  const navigation = useNavigation()
+  // Updated feedback choices: 'Acknowledgment' and 'Improvement'
   const FEEDBACK_CHOICES = [
-    { label: 'Positive', value: 'positive' },
-    { label: 'Negative', value: 'negative' },
+    { label: 'Acknowledgment', value: 'acknowledgment' },
+    { label: 'Improvement', value: 'improvement' },
   ];
 
-  const handleImageSelected = (imageUri) => {
-    setImage(imageUri);
-  };
-
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (feedbackType && comments) {
-      console.log('Feedback submitted:', {
-        email,
-        feedbackType,
-        comments,
-        image,
-      });
-      // Handle your feedback submission logic here (e.g., POST request to the server)
+      setLoading(true);
+
+      // Create the feedback data
+      const feedbackData = {
+        feedback_type: feedbackType,
+        comments: comments,
+      };
+
+      try {
+        // Call the postFeedback API
+        const res = await postFeedback(token, feedbackData);
+        console.log('Feedback submitted:', res);
+
+        // Clear the form after successful submission
+        setFeedbackType('');
+        setComments('');
+        showMessage(
+          {
+            message: "Feedback submitted successfully",
+            type: "success",
+            duration:3000
+          }
+        )
+        navigation.goBack()
+      } catch (error) {
+        console.error('Error submitting feedback:', error);
+        alert('Error submitting feedback. Please try again.');
+      } finally {
+        setLoading(false);
+      }
     } else {
       alert('Please fill out all required fields.');
     }
@@ -51,8 +72,8 @@ const Feedback = ({ token }) => {
         onValueChange={(value) => setFeedbackType(value)}
         options={FEEDBACK_CHOICES}
         placeholder="Select Feedback Type"
-        textColor='primary'
-        font='light'
+        textColor="primary"
+        font="light"
       />
 
       {/* Comments Input */}
@@ -68,14 +89,15 @@ const Feedback = ({ token }) => {
         />
       </View>
 
-      {/* Image Upload (Optional) */}
-      <SettingImageUpload onImageSelected={handleImageSelected} />
-
       {/* Submit Button */}
       {loading ? (
         <ActivityIndicator size="large" color="#3498db" />
       ) : (
-        <Button title="Submit Feedback" onPress={handleSubmit} className="bg-accent text-white py-2 px-4 rounded-full" />
+        <Button
+          title="Submit Feedback"
+          onPress={handleSubmit}
+          className="bg-accent text-white py-2 px-4 rounded-full"
+        />
       )}
     </ScrollView>
   );

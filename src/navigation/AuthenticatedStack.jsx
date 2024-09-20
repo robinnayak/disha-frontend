@@ -30,6 +30,8 @@ import Help from "../component/common/settings/sectionlists/Help";
 import SupportRequest from "../component/common/settings/sectionlists/SupportRequest";
 import Policies from "../component/common/settings/sectionlists/Policies";
 import Feedback from "../component/common/settings/sectionlists/Feedback";
+import SupportRequestList from "../component/common/settings/sectionlists/SupportRequestList";
+import TermsAndConditions from "../component/common/settings/sectionlists/TermsAndConditions";
 
 const Stack = createNativeStackNavigator();
 
@@ -178,6 +180,16 @@ const AuthenticatedStack = () => {
         name="Feedback"
         component={Feedback}
         options={{ title: "Feedback" }}
+      />
+      <Stack.Screen
+        name="TermsAndConditions"
+        component={TermsAndConditions}
+        options={{ title: "Terms And Conditions" }}
+      />
+      <Stack.Screen
+        name="SupportRequestList"
+        component={SupportRequestList}
+        options={{ title: "Support Request List" }}
       />
 
       

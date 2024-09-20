@@ -5,23 +5,27 @@ import {
   Button,
   ScrollView,
   ActivityIndicator,
+  Alert,
+  TouchableOpacity
 } from "react-native";
 import React, { useState } from "react";
-import SettingImageUpload from "./SettingImageUpload"; // Assuming the ImageUpload component is in the same folder
-import { MEDIA_URL } from "../../../../api/base";
+import SettingImageUpload from "./SettingImageUpload";
 import CustomPicker from "../../commonFormComponent/CustomPicker";
 import { useSelector } from "react-redux";
 import GoBack from "../../../menu/GoBack";
+import { postSupportRequest } from "../../../../api/users/request";
+import { MEDIA_URL } from "../../../../api/base";
 
-const SupportRequest = ({ token, profileImage, id, navigation }) => {
-  const defaultImageUri = `${MEDIA_URL}/${profileImage}`;
-  const email = useSelector((state) => state.auth?.user?.user.email);
-
+// Assuming `token`, `profileImage`, and `id` are passed as props
+const SupportRequest = ({ profileImage, id, navigation }) => {
+  const defaultImageUri = `${MEDIA_URL}/${profileImage}`; // Default image URL
+  const email = useSelector((state) => state.auth?.user?.user.email); // Non-editable email
+  const token = useSelector((state) => state.auth?.token?.token);
   const [subject, setSubject] = useState("");
   const [customSubject, setCustomSubject] = useState("");
   const [message, setMessage] = useState("");
-  const [image, setImage] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [image, setImage] = useState(null); // Optional image
+  const [loading, setLoading] = useState(false); // Loading state
 
   const SUBJECT_CHOICES = [
     { label: "Technical Issue", value: "Technical Issue" },
@@ -36,28 +40,68 @@ const SupportRequest = ({ token, profileImage, id, navigation }) => {
   ];
 
   const handleImageSelected = (imageUri) => {
-    setImage(imageUri);
+    console.log("support image uri", imageUri);
+    setImage(imageUri); // Image selection callback
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (subject && (subject !== "Others" || customSubject) && message) {
-      console.log("Support request submitted:", {
-        email, // Include the non-editable email in the form submission
-        subject: subject === "Others" ? customSubject : subject,
-        message,
-        image,
-      });
-      // You can handle your form submission logic here
+      try {
+        setLoading(true); // Start loading
+
+        // Create a FormData object
+        const formData = new FormData();
+        formData.append("email", email); // Non-editable email
+        formData.append(
+          "subject",
+          subject === "Others" ? customSubject : subject
+        ); // Handle custom subject
+        formData.append("message", message); // Support message
+
+        // Append the image if it exists
+        if (image) {
+          const imageExtension = image.split(".").pop(); // Get the file extension from the URI
+          formData.append("image", {
+            uri: image,
+            name: `support_image.${imageExtension}`, // Create dynamic image name with extension
+            type: `image/${imageExtension}`, // Set image type dynamically
+          });
+        }
+
+        // Assuming postSupportRequest API handles file uploads properly
+        const res = await postSupportRequest(token, formData);
+
+        console.log(res.data); // Handle successful response
+        setLoading(false); // Stop loading
+        Alert.alert("Success", "Support request submitted successfully!");
+        navigation.goBack(); // Navigate back on success
+      } catch (error) {
+        console.error(error);
+        setLoading(false); // Stop loading on error
+        Alert.alert("Error", "An error occurred. Please try again later.");
+      }
     } else {
-      alert("Please fill out all required fields.");
+      Alert.alert("Validation Error", "Please fill out all required fields.");
     }
   };
-
+  const handleViewPreviousTickets = () => {
+    navigation.navigate("SupportRequestList"); // Navigate to a screen to show previous tickets
+    // console.log("previous tickets")
+  };
   return (
     <View className="flex-1">
-    <GoBack navigation={navigation} />
+      <GoBack navigation={navigation} />
       <ScrollView className="p-4 bg-background flex-1">
         {/* Title and Description */}
+        {/* View Previous Tickets Button */}
+        <TouchableOpacity
+          onPress={handleViewPreviousTickets}
+          className=" bg-green-300 p-2 mb-2 rounded-full"
+        >
+          <Text className="text-center text-primary">
+            View Previous Tickets
+          </Text>
+        </TouchableOpacity>
         <View className="mb-6">
           <Text className="text-primary text-2xl font-bold text-center">
             Submit a Support Request
@@ -73,7 +117,7 @@ const SupportRequest = ({ token, profileImage, id, navigation }) => {
           <Text className="text-primary mb-2">Email (Non-editable)</Text>
           <TextInput
             value={email}
-            editable={false} // Makes the field non-editable
+            editable={false}
             className="p-2 border text-gray-500 border-secondary rounded bg-gray-200"
           />
         </View>
@@ -102,6 +146,7 @@ const SupportRequest = ({ token, profileImage, id, navigation }) => {
           </View>
         )}
 
+        {/* Message Field */}
         <View className="mb-6">
           <Text className="text-primary mb-2">Message</Text>
           <TextInput
@@ -114,7 +159,7 @@ const SupportRequest = ({ token, profileImage, id, navigation }) => {
           />
         </View>
 
-        {/* Reusable Image Upload Component */}
+        {/* Image Upload (Optional) */}
         <SettingImageUpload
           onImageSelected={handleImageSelected}
           defaultImageUri={defaultImageUri}

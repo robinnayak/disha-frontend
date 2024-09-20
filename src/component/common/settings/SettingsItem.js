@@ -41,7 +41,9 @@ const SettingsItem = ({
       case "Feedback":
         navigation.navigate("Feedback");
         break;
-
+      case "Terms and Conditions":
+        navigation.navigate("TermsAndConditions");
+        break;
       default:
         // Display an alert for under maintenance sections
         Alert.alert(

@@ -13,6 +13,7 @@ import {
   faInfoCircle,
   faSignOutAlt,
   faCommentDots,
+  faFileMedicalAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import Section from "../../component/common/settings/Section";
 import BottomMenu from "../../component/menu/BottomMenu";
@@ -102,6 +103,7 @@ const SettingsScreen = () => {
             { icon: faFileAlt, label: "Support Request" },
             { icon: faFileAlt, label: "Policies" },
             { icon: faCommentDots, label: "Feedback" },
+            { icon: faFileMedicalAlt, label: "Terms and Conditions" },
           ]}
           navigation={navigation}
           dispatch={dispatch}
