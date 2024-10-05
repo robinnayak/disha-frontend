@@ -32,6 +32,8 @@ import Policies from "../component/common/settings/sectionlists/Policies";
 import Feedback from "../component/common/settings/sectionlists/Feedback";
 import SupportRequestList from "../component/common/settings/sectionlists/SupportRequestList";
 import TermsAndConditions from "../component/common/settings/sectionlists/TermsAndConditions";
+import CurrentTripStatus from "../component/passenger/CurrentTripStatus";
+import CurrentTripDetail from "../component/passenger/CurrentTripDetail";
 
 const Stack = createNativeStackNavigator();
 
@@ -85,14 +87,13 @@ const AuthenticatedStack = () => {
         component={TripView}
         options={{ title: "Trip" }}
       />
-      
+
       <Stack.Screen
         name="TripForm"
         component={TripForm}
         options={{ title: "create Trip" }}
       />
 
-    
       <Stack.Screen
         name="VehicleForm"
         component={VehicleForm}
@@ -120,7 +121,7 @@ const AuthenticatedStack = () => {
         component={BookingScreen}
         options={{ title: "Booking" }}
       />
-      
+
       <Stack.Screen
         name="ToBook"
         component={ToBookDetail}
@@ -136,11 +137,7 @@ const AuthenticatedStack = () => {
         component={PayStatusScreen}
         options={{ title: "Pay Status" }}
       />
-      <Stack.Screen
-        name="Pay"
-        component={Pay}
-        options={{ title: "Pay " }}
-      />
+      <Stack.Screen name="Pay" component={Pay} options={{ title: "Pay " }} />
       <Stack.Screen
         name="TicketDetail"
         component={TicketDetail}
@@ -192,8 +189,16 @@ const AuthenticatedStack = () => {
         options={{ title: "Support Request List" }}
       />
 
-      
-
+      <Stack.Screen
+        name="CurrentTripStatus"
+        component={CurrentTripStatus}
+        options={{ title: "Current Trip Status" }}
+      />
+      <Stack.Screen
+        name="CurrentTripDetail"
+        component={CurrentTripDetail}
+        options={{ title: "Current Trip Detail" }}
+      />
     </Stack.Navigator>
   );
 };

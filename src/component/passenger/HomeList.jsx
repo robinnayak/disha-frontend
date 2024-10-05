@@ -164,14 +164,14 @@ const HomeList = ({ navigation }) => {
                   <Text className="text-lg font-bold text-white mb-2">
                     {trip.vehicle_type}
                   </Text>
-                  <Text className="text-sm text-secondary-text mb-1">
+                  <Text className="text-sm text-primary-on-dark mb-1">
                     {trip.from_location} ➔ {trip.to_location}
                   </Text>
                   <View className="flex-row justify-between mb-2">
-                    <Text className="text-sm text-secondary-text">{`Trip Date: ${tripDate}`}</Text>
-                    <Text className="text-sm text-secondary-text">{`Trip Time: ${tripTime}`}</Text>
+                    <Text className="text-sm text-primary-on-dark">{`Trip Date: ${tripDate}`}</Text>
+                    <Text className="text-sm text-primary-on-dark">{`Trip Time: ${tripTime}`}</Text>
                   </View>
-                  <Text className="text-sm text-secondary-text mb-1">
+                  <Text className="text-sm text-primary-on-dark mb-1">
                     Available Seats: {trip.available_seat}
                   </Text>
                 </View>

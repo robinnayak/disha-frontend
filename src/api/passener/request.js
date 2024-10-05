@@ -1,5 +1,5 @@
 import axios from "axios";
-import { home_api, payment_api, paystatus_api,payment_list_api } from "./endpoints";
+import { home_api, payment_api, paystatus_api,payment_list_api,ongoingtrip_api } from "./endpoints";
 
 export const getHome = async (token) => {
   const res = await axios.get(home_api, {
@@ -46,3 +46,12 @@ export const getPaymentList = async (token)=>{
   return res.data;
 }
 
+
+export const getOngoingTrip = async (token)=>{
+  const res = await axios.get(ongoingtrip_api, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return res.data;
+}

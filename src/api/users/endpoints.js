@@ -7,3 +7,5 @@ export const org_profile_api = `${BASE_URL}/${API_ROOT}/profile/`;
 export const support_request_api = `${BASE_URL}/support-request/`;
 // http://localhost:8000/api/feedback/
 export const feedback_api = `${BASE_URL}/feedback/`;
+// http://localhost:8000/api/reviews/create/
+export const create_review_api = `${BASE_URL}/reviews/create/`;

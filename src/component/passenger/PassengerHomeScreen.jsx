@@ -1,7 +1,7 @@
 // src/screens/PassengerHomeScreen.jsx
 
 import React, { useState, useCallback } from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import { getDriverProfile } from "../../api/driver/request";
 import { handleApiError } from "../../utils/errorHandler";
@@ -54,6 +54,28 @@ const PassengerHomeScreen = ({ navigation, token }) => {
           navigation={navigation}
         />
         {/* <HomeList /> Pass trip data */}
+        {/* Horizontal Card Buttons */}
+        <View className="flex-row justify-around mt-4 mb-6">
+          <TouchableOpacity 
+            className="bg-primary p-4 rounded-lg items-center flex-1 mx-1" 
+            onPress={() => navigation.navigate('CurrentTripStatus')}
+          >
+            <Text className="text-white text-lg">Check Trip</Text>
+          </TouchableOpacity>
+          {/* <TouchableOpacity 
+            className="bg-primary p-4 rounded-lg items-center flex-1 mx-1" 
+            onPress={() => navigation.navigate('Booking')}
+          >
+            <Text className="text-white text-lg">Booking</Text>
+          </TouchableOpacity>
+          <TouchableOpacity 
+            className="bg-primary p-4 rounded-lg items-center flex-1 mx-1" 
+            onPress={() => navigation.navigate('VehicleDetail')}
+          >
+            <Text className="text-white text-lg">Vehicle</Text>
+          </TouchableOpacity> */}
+        </View>
+
         <HomeList navigation={navigation}/>
       </ScrollView>
       <BottomMenu />
